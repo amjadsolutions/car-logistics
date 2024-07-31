@@ -15,7 +15,8 @@ class CarFactory extends Factory
             'make' => $this->faker->word,
             'model' => $this->faker->word,
             'year' => $this->faker->year,
-            'status' => $this->faker->word, // Adjust if necessary
+            'vin' => $this->faker->unique()->word,
+            'shipping_status' => $this->faker->word, // Adjust if necessary
         ];
     }
 }

@@ -13,6 +13,7 @@ class Car extends Model
         'make',
         'model',
         'year',
-        'status',
+        'vin',
+        'shipping_status',
     ];
 }

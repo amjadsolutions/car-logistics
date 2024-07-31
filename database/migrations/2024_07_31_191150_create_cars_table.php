@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('make');
             $table->string('model');
             $table->year('year');
-            $table->string('status'); // e.g., 'available', 'in_transit', 'delivered'
+            $table->string('vin')->unique()->default(''); // Default empty string if appropriate
+            $table->string('shipping_status'); // e.g., 'available', 'in_transit', 'delivered'
             $table->timestamps();
         });
     }

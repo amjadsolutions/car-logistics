@@ -39,8 +39,9 @@ class CarControllerTest extends TestCase
         ])->post('/api/cars', [
             'make' => 'Toyota',
             'model' => 'Corolla',
+            'vin' => '1234567890ABCDEFG',
             'year' => 2023,
-            'status' => 'available',
+            'shipping_status' => 'available',
         ]);
 
         $response->assertStatus(201);
@@ -58,11 +59,11 @@ class CarControllerTest extends TestCase
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $token,
         ])->patch("/api/cars/{$car->id}", [
-            'status' => 'in_transit',
+            'shipping_status' => 'in_transit',
         ]);
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('cars', ['id' => $car->id, 'status' => 'in_transit']);
+        $this->assertDatabaseHas('cars', ['id' => $car->id, 'shipping_status' => 'in_transit']);
     }
 
     /** @test */

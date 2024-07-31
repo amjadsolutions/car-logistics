@@ -27,8 +27,11 @@ class CarController extends Controller
         if ($request->has('year')) {
             $query->where('year', $request->year);
         }
-        if ($request->has('status')) {
-            $query->where('status', $request->status);
+        if ($request->has('vin')) {
+            $query->where('vin', $request->vin);
+        }
+        if ($request->has('shipping_status')) {
+            $query->where('shipping_status', $request->shipping_status);
         }
 
         $cars = $query->paginate(15);
@@ -43,7 +46,8 @@ class CarController extends Controller
             'make' => 'required|string|max:255',
             'model' => 'required|string|max:255',
             'year' => 'required|integer|digits:4',
-            'status' => 'required|string',
+            'vin' => 'required|string|size:17|unique:cars',
+            'shipping_status' => 'required|string|max:255',
         ]);
 
         $car = Car::create($validated);
@@ -56,21 +60,21 @@ class CarController extends Controller
     {
         $car = Car::findOrFail($id);
 
-        $validated = $request->validate([
-            'status' => 'required|string',
-        ]);
+        $car->update($request->only(['make', 'model', 'year', 'vin', 'shipping_status']));
 
-        $car->update($validated);
-
-        return response()->json($car);
+        return response()->json($car, 200);
     }
 
     // Delete a Car
     public function destroy($id)
     {
+
         $car = Car::findOrFail($id);
         $car->delete();
 
-        return response()->json(null, 204);
+        return response()->json([
+            'message' => 'Car deleted successfully.',
+            'status' => 204
+        ], 204);
     }
 }
