@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('welcome'); // Or another view if you have a specific registration view
 });
+
+Route::get('/dashboard', function () {
+    return view('welcome'); // Or another view if you have a specific registration view
+});

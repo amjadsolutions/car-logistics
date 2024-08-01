@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     @vite('resources/js/app.js')
 </head>
-<body class="hold-transition login-page">
+<body >
     <div id="app"></div> <!-- Vue app will be mounted here -->
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
