@@ -17,10 +17,14 @@ Route::get('/', function () {
     return view('welcome'); // Ensure this view contains the Vue app and AdminLTE layout
 });
 
+Route::get('/car/{id}', function () {
+    return view('welcome'); // Or another view if you have a specific registration view
+});
+
 Route::get('/register', function () {
     return view('welcome'); // Or another view if you have a specific registration view
 });
 
-Route::get('/dashboard', function () {
+Route::get('/login', function () {
     return view('welcome'); // Or another view if you have a specific registration view
 });

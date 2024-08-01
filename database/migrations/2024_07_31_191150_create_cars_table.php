@@ -18,6 +18,7 @@ return new class extends Migration
             $table->year('year');
             $table->string('vin')->unique()->default(''); // Default empty string if appropriate
             $table->string('shipping_status'); // e.g., 'available', 'in_transit', 'delivered'
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

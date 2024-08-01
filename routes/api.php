@@ -20,10 +20,18 @@ use App\Http\Controllers\CarController;
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
-Route::middleware('auth:api')->group(function () {
-    Route::get('/cars', [CarController::class, 'index']);
-    Route::post('/cars', [CarController::class, 'store']);
-    Route::patch('/cars/{id}', [CarController::class, 'update']);
-    Route::delete('/cars/{id}', [CarController::class, 'destroy']);
-    Route::post('/logout', [AuthController::class, 'logout']);
-});
+// Route::middleware('auth:api')->group(function () {
+//     Route::get('/cars', [CarController::class, 'index']);
+//     Route::post('/cars', [CarController::class, 'store']);
+//     Route::patch('/cars/{id}', [CarController::class, 'update']);
+//     Route::delete('/cars/{id}', [CarController::class, 'destroy']);
+//     Route::post('/logout', [AuthController::class, 'logout']);
+// });
+
+
+Route::get('/cars', [CarController::class, 'index']);
+Route::post('/cars', [CarController::class, 'store']);
+Route::patch('/cars/{id}', [CarController::class, 'update']);
+Route::delete('/cars/{id}', [CarController::class, 'destroy']);
+Route::get('cars/{id}', [CarController::class, 'show']);
+Route::post('/logout', [AuthController::class, 'logout']);

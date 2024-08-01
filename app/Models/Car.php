@@ -9,11 +9,19 @@ class Car extends Model
 {
     use HasFactory;
 
+    public function images()
+    {
+        return $this->hasMany(CarImage::class);
+    }
+
+
+
     protected $fillable = [
         'make',
         'model',
         'year',
         'vin',
         'shipping_status',
+        'image',
     ];
 }
