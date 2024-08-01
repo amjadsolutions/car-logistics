@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); // Ensure this view contains the Vue app and AdminLTE layout
+});
+
+Route::get('/register', function () {
+    return view('welcome'); // Or another view if you have a specific registration view
 });
