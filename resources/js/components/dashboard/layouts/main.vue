@@ -1,549 +1,434 @@
 <template>
-    <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        data-widget="pushmenu"
-                        href="#"
-                        role="button"
-                        ><i class="fas fa-bars"></i
-                    ></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Logout</a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        data-widget="navbar-search"
-                        href="#"
-                        role="button"
-                    >
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <div class="navbar-search-block">
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm">
-                                <input
-                                    class="form-control form-control-navbar"
-                                    type="search"
-                                    placeholder="Search"
-                                    aria-label="Search"
-                                />
-                                <div class="input-group-append">
-                                    <button
-                                        class="btn btn-navbar"
-                                        type="submit"
-                                    >
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                    <button
-                                        class="btn btn-navbar"
-                                        type="button"
-                                        data-widget="navbar-search"
-                                    >
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-comments"></i>
-                        <span class="badge badge-danger navbar-badge">3</span>
-                    </a>
-                    <div
-                        class="dropdown-menu dropdown-menu-lg dropdown-menu-right"
-                    >
-                        <a href="#" class="dropdown-item">
-                            <div class="media">
-                                <img
-                                    src="http://127.0.0.1:8000/img/user1-128x128.jpg"
-                                    alt="User Avatar"
-                                    class="img-size-50 mr-3 img-circle"
-                                />
-                                <div class="media-body">
-                                    <h3 class="dropdown-item-title">
-                                        Brad Diesel
-                                        <span
-                                            class="float-right text-sm text-danger"
-                                            ><i class="fas fa-star"></i
-                                        ></span>
-                                    </h3>
-                                    <p class="text-sm">
-                                        Call me whenever you can...
-                                    </p>
-                                    <p class="text-sm text-muted">
-                                        <i class="far fa-clock mr-1"></i> 4
-                                        Hours Ago
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <div class="media">
-                                <img
-                                    src="http://127.0.0.1:8000/img/user8-128x128.jpg"
-                                    alt="User Avatar"
-                                    class="img-size-50 img-circle mr-3"
-                                />
-                                <div class="media-body">
-                                    <h3 class="dropdown-item-title">
-                                        John Pierce
-                                        <span
-                                            class="float-right text-sm text-muted"
-                                            ><i class="fas fa-star"></i
-                                        ></span>
-                                    </h3>
-                                    <p class="text-sm">
-                                        I got your message bro
-                                    </p>
-                                    <p class="text-sm text-muted">
-                                        <i class="far fa-clock mr-1"></i> 4
-                                        Hours Ago
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <div class="media">
-                                <img
-                                    src="http://127.0.0.1:8000/img/user3-128x128.jpg"
-                                    alt="User Avatar"
-                                    class="img-size-50 img-circle mr-3"
-                                />
-                                <div class="media-body">
-                                    <h3 class="dropdown-item-title">
-                                        Nora Silvester
-                                        <span
-                                            class="float-right text-sm text-warning"
-                                            ><i class="fas fa-star"></i
-                                        ></span>
-                                    </h3>
-                                    <p class="text-sm">The subject goes here</p>
-                                    <p class="text-sm text-muted">
-                                        <i class="far fa-clock mr-1"></i> 4
-                                        Hours Ago
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer"
-                            >See All Messages</a
-                        >
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-bell"></i>
-                        <span class="badge badge-warning navbar-badge">15</span>
-                    </a>
-                    <div
-                        class="dropdown-menu dropdown-menu-lg dropdown-menu-right"
-                    >
-                        <span class="dropdown-item dropdown-header"
-                            >15 Notifications</span
-                        >
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm"
-                                >3 mins</span
-                            >
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
-                            <span class="float-right text-muted text-sm"
-                                >12 hours</span
-                            >
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm"
-                                >2 days</span
-                            >
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer"
-                            >See All Notifications</a
-                        >
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        data-widget="fullscreen"
-                        href="#"
-                        role="button"
-                    >
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        data-widget="control-sidebar"
-                        data-slide="true"
-                        href="#"
-                        role="button"
-                    >
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <aside
-            class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4"
-        >
-            <a href="../../index3.html" class="brand-link">
-                <img
-                    src="http://127.0.0.1:8000/img/AdminLTELogo.png"
-                    alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3"
-                    style="opacity: 0.8"
-                />
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
-            </a>
-
+    <div id="wrapper">
+        <div id="header" class="">
             <div
-                class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition"
+                class="header-main header-main-listing-five header-listing-fixed"
             >
-                <div class="os-resize-observer-host observed">
-                    <div
-                        class="os-resize-observer"
-                        style="left: 0px; right: auto"
-                    ></div>
-                </div>
-                <div
-                    class="os-size-auto-observer observed"
-                    style="height: calc(100% + 1px); float: left"
-                >
-                    <div class="os-resize-observer"></div>
-                </div>
-
-                <div class="os-padding">
-                    <div
-                        class="os-viewport os-viewport-native-scrollbars-invisible"
-                        style="overflow-y: scroll"
-                    >
-                        <div
-                            class="os-content"
-                            style="padding: 0px 8px; height: 100%; width: 100%"
-                        >
-                            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                                <div class="image">
-                                    <img
-                                        src="http://127.0.0.1:8000/img/user2-160x160.jpg"
-                                        class="img-circle elevation-2"
-                                        alt="User Image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <a href="#" class="d-block"
-                                        >Alexander Pierce</a
+                <div class="container">
+                    <div class="row header-row">
+                        <div class="col-md-2 col-sm-12 col-xs-12">
+                            <div class="stm-header-left">
+                                <div class="logo-main" style="margin-top: 20px">
+                                    <a
+                                        class="bloglogo"
+                                        href="https://motors.stylemixthemes.com/elementor-classified-five/"
                                     >
-                                </div>
-                            </div>
-
-                            <div class="form-inline">
-                                <div
-                                    class="input-group"
-                                    data-widget="sidebar-search"
-                                >
-                                    <input
-                                        class="form-control form-control-sidebar"
-                                        type="search"
-                                        placeholder="Search"
-                                        aria-label="Search"
-                                    />
-                                    <div class="input-group-append">
-                                        <button class="btn btn-sidebar">
-                                            <i class="fas fa-search fa-fw"></i>
-                                        </button>
+                                        <img
+                                            src="https://motors.stylemixthemes.com/elementor-classified-five/wp-content/uploads/sites/28/2022/07/logo-listing-1.png"
+                                            style="width: px"
+                                            title="Home"
+                                            alt="Logo"
+                                        />
+                                    </a>
+                                    <div
+                                        class="mobile-menu-trigger visible-sm visible-xs"
+                                    >
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
                                     </div>
                                 </div>
                             </div>
-
-                            <nav class="mt-2">
-                                <ul
-                                    class="nav nav-pills nav-sidebar flex-column"
-                                    data-widget="treeview"
-                                    role="menu"
-                                    data-accordion="false"
-                                >
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="nav-icon fas fa-tachometer-alt"
-                                            ></i>
-                                            <p>
-                                                Dashboard
-                                                <i
-                                                    class="right fas fa-angle-left"
-                                                ></i>
-                                            </p>
-                                        </a>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a
-                                                    href="../../index.html"
-                                                    class="nav-link"
-                                                >
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>Dashboard v1</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a
-                                                    href="../../index2.html"
-                                                    class="nav-link"
-                                                >
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>Dashboard v2</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a
-                                                    href="../../index3.html"
-                                                    class="nav-link"
-                                                >
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>Dashboard v3</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a
-                                            href="../widgets.html"
-                                            class="nav-link"
+                        </div>
+                        <div class="col-md-10 hidden-sm hidden-xs">
+                            <div
+                                class="stm-header-right"
+                                style="margin-top: 7px"
+                            >
+                                <div class="main-menu" style="">
+                                    <ul class="header-menu clearfix">
+                                        <li
+                                            id="menu-item-92632"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-92596 current_page_item menu-item-92632"
                                         >
-                                            <i class="nav-icon fas fa-th"></i>
-                                            <p>
-                                                Widgets
-                                                <span
-                                                    class="right badge badge-danger"
-                                                    >New</span
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/cars/"
+                                                aria-current="page"
+                                                >Cars</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-92630"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92630"
+                                        >
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/motorcycles/"
+                                                >Moto</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-92631"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92631"
+                                        >
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/aircrafts/"
+                                                >Aircraft</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-94268"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94268"
+                                        >
+                                            <a href="#">Listing</a>
+                                            <ul class="sub-menu">
+                                                <li
+                                                    id="menu-item-94271"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-listings menu-item-94271"
                                                 >
-                                            </p>
-                                        </a>
-                                    </li>
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/listings/toyota-avalon-ltx-leather-sunroof/"
+                                                        >Classic</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    id="menu-item-94269"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-listings menu-item-94269"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/listings/kia-sportage-brand-new-model-2021/"
+                                                        >Modern</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    id="menu-item-94270"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-listings menu-item-94270"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/listings/toyota-camry-xse-2016/"
+                                                        >Mosaic</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    id="menu-item-94272"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-listings menu-item-94272"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/listings/tesla-model-roadster-perfect-condition/"
+                                                        >Carousel</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li
+                                            id="menu-item-92475"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92475"
+                                        >
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/pricing/"
+                                                >Pricing</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-92469"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-92469"
+                                        >
+                                            <a href="#">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li
+                                                    id="menu-item-92479"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92479"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/dealers-list/"
+                                                        >Dealers list</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    id="menu-item-92471"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92471"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/about-us/"
+                                                        >About Us</a
+                                                    >
+                                                </li>
+                                                <li
+                                                    id="menu-item-92470"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92470"
+                                                >
+                                                    <a
+                                                        href="https://motors.stylemixthemes.com/elementor-classified-five/contact-us/"
+                                                        >Contact Us</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="fas fa-circle nav-icon"
-                                            ></i>
-                                            <p>Level 1</p>
+                                <div class="stm-compare">
+                                    <a
+                                        class="lOffer-compare"
+                                        href="https://motors.stylemixthemes.com/elementor-classified-five/compare/"
+                                        title="View compared items"
+                                    >
+                                        <i
+                                            class="list-icon stm-boats-icon-compare-boats"
+                                        ></i>
+                                        <span class="list-badge">
+                                            <span
+                                                class="stm-current-cars-in-compare"
+                                                >0</span
+                                            >
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <div class="profile-wrap">
+                                    <div class="lOffer-account-unit">
+                                        <a
+                                            href="https://motors.stylemixthemes.com/elementor-classified-five/loginregister/"
+                                            class="lOffer-account"
+                                        >
+                                            <i class="fas fa-user" style=""></i>
                                         </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="nav-icon fas fa-circle"
-                                            ></i>
-                                            <p>
-                                                Level 1
-                                                <i
-                                                    class="right fas fa-angle-left"
-                                                ></i>
-                                            </p>
-                                        </a>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>Level 2</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>
-                                                        Level 2
-                                                        <i
-                                                            class="right fas fa-angle-left"
-                                                        ></i>
-                                                    </p>
-                                                </a>
-                                                <ul class="nav nav-treeview">
-                                                    <li class="nav-item">
-                                                        <a
-                                                            href="#"
-                                                            class="nav-link"
-                                                        >
-                                                            <i
-                                                                class="far fa-dot-circle nav-icon"
-                                                            ></i>
-                                                            <p>Level 3</p>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a
-                                                            href="#"
-                                                            class="nav-link"
-                                                        >
-                                                            <i
-                                                                class="far fa-dot-circle nav-icon"
-                                                            ></i>
-                                                            <p>Level 3</p>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a
-                                                            href="#"
-                                                            class="nav-link"
-                                                        >
-                                                            <i
-                                                                class="far fa-dot-circle nav-icon"
-                                                            ></i>
-                                                            <p>Level 3</p>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i
-                                                        class="far fa-circle nav-icon"
-                                                    ></i>
-                                                    <p>Level 2</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="fas fa-circle nav-icon"
-                                            ></i>
-                                            <p>Level 1</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-header">LABELS</li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="nav-icon far fa-circle text-danger"
-                                            ></i>
-                                            <p class="text">Important</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="nav-icon far fa-circle text-warning"
-                                            ></i>
-                                            <p>Warning</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i
-                                                class="nav-icon far fa-circle text-info"
-                                            ></i>
-                                            <p>Informational</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+
+                                        <div
+                                            class="lOffer-account-dropdown stm-login-form-unregistered"
+                                        >
+                                            <form method="post">
+                                                <div class="form-group">
+                                                    <h4>Login or E-mail</h4>
+                                                    <input
+                                                        type="text"
+                                                        name="stm_user_login"
+                                                        autocomplete="off"
+                                                        placeholder="Enter login or E-mail"
+                                                    />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <h4>Password</h4>
+                                                    <input
+                                                        type="password"
+                                                        name="stm_user_password"
+                                                        autocomplete="off"
+                                                        placeholder="Enter password"
+                                                    />
+                                                </div>
+
+                                                <div
+                                                    class="form-group form-checker"
+                                                >
+                                                    <label>
+                                                        <div class="checker">
+                                                            <span
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    name="stm_remember_me"
+                                                            /></span>
+                                                        </div>
+                                                        <span>Remember me</span>
+                                                    </label>
+                                                </div>
+                                                <input
+                                                    type="submit"
+                                                    value="Login"
+                                                />
+                                                <span class="stm-listing-loader"
+                                                    ><i
+                                                        class="stm-icon-load1"
+                                                    ></i
+                                                ></span>
+                                                <a
+                                                    href="https://motors.stylemixthemes.com/elementor-classified-five/loginregister/"
+                                                    class="stm_label"
+                                                    >Sign Up</a
+                                                >
+                                                <div
+                                                    class="stm-validation-message"
+                                                ></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stm-c-f-add-btn-wrap">
+                                    <a
+                                        class="add-listing-btn stm-button heading-font"
+                                        href="/elementor-classified-five/add-your-item/"
+                                    >
+                                        <i class="fas fa-plus" style=""></i> Add
+                                        your item
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"
-                >
-                    <div class="os-scrollbar-track">
-                        <div
-                            class="os-scrollbar-handle"
-                            style="width: 100%; transform: translate(0px, 0px)"
-                        ></div>
-                    </div>
-                </div>
-                <div
-                    class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"
-                >
-                    <div class="os-scrollbar-track">
-                        <div
-                            class="os-scrollbar-handle"
-                            style="
-                                height: 16.3175%;
-                                transform: translate(0px, 0px);
-                            "
-                        ></div>
-                    </div>
-                </div>
-                <div class="os-scrollbar-corner"></div>
+                <!--container-->
             </div>
-        </aside>
+            <!--header-main-->
+        </div>
+        <!--HEADER-->
+        <slot></slot>
 
-        <div class="content-wrapper">
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Fixed Layout</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item">
-                                    <a href="#">Home</a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="#">Layout</a>
-                                </li>
-                                <li class="breadcrumb-item active">
-                                    Fixed Layout
-                                </li>
-                            </ol>
-                        </div>
+        <!--main-->
+    </div>
+    <!-- begin::footer -->
+    <footer id="footer" style="padding: 0px !important">
+        <div id="footer-main">
+            <div class="footer_widgets_wrapper less_4">
+                <div class="container">
+                    <div class="widgets cols_2 clearfix">
+                        <aside id="search-4" class="widget widget_search">
+                            <div class="widget-wrapper">
+                                <form
+                                    role="search"
+                                    method="get"
+                                    class="search-form"
+                                    action="https://motors.stylemixthemes.com/elementor-classified-five/"
+                                >
+                                    <label>
+                                        <span class="screen-reader-text"
+                                            >Search for:</span
+                                        >
+                                        <input
+                                            type="search"
+                                            class="search-field"
+                                            placeholder="Search …"
+                                            value=""
+                                            name="s"
+                                        />
+                                    </label>
+                                    <input
+                                        type="submit"
+                                        class="search-submit"
+                                        value="Search"
+                                    />
+                                </form>
+                            </div>
+                        </aside>
+                        <aside id="block-12" class="widget widget_block">
+                            <div class="widget-wrapper">
+                                <div
+                                    class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"
+                                >
+                                    <div
+                                        class="wp-block-group__inner-container"
+                                    ></div>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside id="block-13" class="widget widget_block">
+                            <div class="widget-wrapper">
+                                <div
+                                    class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"
+                                >
+                                    <div
+                                        class="wp-block-group__inner-container"
+                                    ></div>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside id="nav_menu-2" class="widget widget_nav_menu">
+                            <div class="widget-wrapper">
+                                <div class="menu-bottom-menu-container">
+                                    <ul id="menu-bottom-menu" class="menu">
+                                        <li
+                                            id="menu-item-93607"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93607"
+                                        >
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/contact-us/"
+                                                >Contact Us</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-93608"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93608"
+                                        >
+                                            <a
+                                                href="https://motors.stylemixthemes.com/elementor-classified-five/about-us/"
+                                                >About Us</a
+                                            >
+                                        </li>
+                                        <li
+                                            id="menu-item-93609"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93609"
+                                        >
+                                            <a href="#">Terms of Service</a>
+                                        </li>
+                                        <li
+                                            id="menu-item-93610"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93610"
+                                        >
+                                            <a href="#">Privacy Statement</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
-            </section>
-            <slot></slot>
+            </div>
         </div>
 
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.2.0
+        <div id="footer-copyright" style="background-color: #1b232f">
+            <div class="container footer-copyright">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="clearfix">
+                            <div class="copyright-text heading-font">
+                                © 2023
+                                <a
+                                    target="_blank"
+                                    href="https://stylemixthemes.com/motors/"
+                                    >Motors Auto Dealer Theme</a
+                                ><span class="divider"></span>Trademarks and
+                                brands are the property of their respective
+                                owners.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="clearfix">
+                            <div class="pull-right xs-pull-left">
+                                <!-- Header top bar Socials -->
+                                <div class="pull-right">
+                                    <div class="copyright-socials">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <a
+                                                    href="https://www.facebook.com/"
+                                                    target="_blank"
+                                                >
+                                                    <i
+                                                        class="fab fa-facebook"
+                                                    ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://twitter.com/"
+                                                    target="_blank"
+                                                >
+                                                    <i
+                                                        class="fab fa-twitter"
+                                                    ></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.instagram.com/"
+                                                    target="_blank"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <strong
-                >Copyright © 2014-2021
-                <a href="https://adminlte.io">AdminLTE.io</a>.</strong
-            >
-            All rights reserved.
-        </footer>
-
-        <div id="sidebar-overlay"></div>
-    </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 </template>
 
 <script>

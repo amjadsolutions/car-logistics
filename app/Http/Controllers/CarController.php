@@ -6,7 +6,6 @@ use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-
 class CarController extends Controller
 {
     // Constructor to ensure authentication
@@ -18,28 +17,25 @@ class CarController extends Controller
     // Get Cars with Pagination and Filtering
     public function index(Request $request)
     {
+        // Start building the query
         $query = Car::query();
 
-        if ($request->has('make')) {
-            $query->where('make', $request->make);
-        }
-        if ($request->has('model')) {
-            $query->where('model', $request->model);
-        }
-        if ($request->has('year')) {
-            $query->where('year', $request->year);
-        }
-        if ($request->has('vin')) {
-            $query->where('vin', $request->vin);
-        }
-        if ($request->has('shipping_status')) {
-            $query->where('shipping_status', $request->shipping_status);
+        // Apply filters if they are present in the request
+        foreach ([
+            'make', 'model', 'year', 'vin', 'shipping_status', 'fuel_type', 'engine', 'location', 'mileage', 'price', 'stock', 'used'
+        ] as $filter) {
+            if ($request->has($filter)) {
+                $query->where($filter, $request->input($filter));
+            }
         }
 
-        $cars = $query->paginate(15);
+        // Paginate the results, using the page parameter from the request
+        $cars = $query->paginate(5);
 
+        // Return the results as a JSON response
         return response()->json($cars);
     }
+
 
     // Add a New Car
     public function store(Request $request)
@@ -50,6 +46,13 @@ class CarController extends Controller
             'year' => 'required|integer|digits:4',
             'vin' => 'required|string|size:17|unique:cars',
             'shipping_status' => 'required|string|max:255',
+            'fuel_type' => 'required|string|max:255',
+            'engine' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'mileage' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0',
+            'used' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image
         ]);
 
@@ -75,8 +78,7 @@ class CarController extends Controller
         return response()->json($car, 201);
     }
 
-
-    // Update Car Status
+    // Update Car
     public function update(Request $request, $id)
     {
         $car = Car::findOrFail($id);
@@ -87,6 +89,13 @@ class CarController extends Controller
             'year' => 'sometimes|integer|digits:4',
             'vin' => 'sometimes|string|size:17',
             'shipping_status' => 'sometimes|string|max:255',
+            'fuel_type' => 'sometimes|string|max:255',
+            'engine' => 'sometimes|string|max:255',
+            'location' => 'sometimes|string|max:255',
+            'mileage' => 'sometimes|string|max:255',
+            'price' => 'sometimes|numeric|min:0',
+            'stock' => 'sometimes|integer|min:0',
+            'used' => 'sometimes|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -106,7 +115,6 @@ class CarController extends Controller
 
         return response()->json($car, 200);
     }
-
 
     // Delete a Car
     public function destroy($id)
@@ -131,6 +139,8 @@ class CarController extends Controller
             'status' => 204
         ], 204);
     }
+
+    // Show a single Car with its images
     public function show($id)
     {
         $car = Car::with('images')->findOrFail($id);

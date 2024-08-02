@@ -9,13 +9,13 @@ class Car extends Model
 {
     use HasFactory;
 
+    // Define the relationship with CarImage
     public function images()
     {
         return $this->hasMany(CarImage::class);
     }
 
-
-
+    // Specify the attributes that are mass assignable
     protected $fillable = [
         'make',
         'model',
@@ -23,5 +23,12 @@ class Car extends Model
         'vin',
         'shipping_status',
         'image',
+        'fuel_type',
+        'engine',
+        'location',
+        'mileage',
+        'price',
+        'stock',
+        'used',
     ];
 }
